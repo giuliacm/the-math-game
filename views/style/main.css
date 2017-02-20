@@ -1,0 +1,48 @@
+html {
+    background: dimgrey;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Futura";
+}
+
+header {
+    color: white;
+    font-size: 55px;
+    text-align: center;
+}
+
+.thegame {
+    list-style:none;
+    margin:20px;
+    padding:20px;
+    margin-top: 0;
+    padding-top:0;
+    text-align:center;
+    color: cornflowerblue;
+    font-size: 25px;
+}
+
+ul {
+    padding:0;
+    list-style-type: none;
+}
+
+li {
+    list-style-type: none;
+    display:inline;
+}
+
+li a {
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 40px;
+    color: white;
+}
+
+li a:hover {
+    color: cornflowerblue;
+}
