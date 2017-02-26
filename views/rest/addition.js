@@ -52,10 +52,7 @@ $(function () {
         else if (level == hard_level) {
             score = score + hard_points;
         }
-
-
         document.getElementById('score').innerHTML = '<p align="center">score:   ' + score + '</p>';
-
     }
 
 

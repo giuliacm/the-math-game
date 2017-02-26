@@ -82,8 +82,8 @@ $(function () {
                 if (submitted == correct_answer) {
                     // $('#game').hide().delay(5000);
                     // $('#correct').show().delay(5000).fadeOut();
-                    update_score(level);
-                    generate_question(level);
+                    update_score(level1);
+                    generate_question(level1);
                 }
                 else {
                     document.getElementById('game').innerHTML = '<p align="center">game over!</p>';
