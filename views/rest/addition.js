@@ -23,7 +23,6 @@ $(function () {
 
         generate_question(easy_level);
     });
-
     $("#medium").click(function (e) {
         e.preventDefault();
         console.log('clicked medium');
@@ -80,8 +79,6 @@ $(function () {
 
             if(typeof submitted != 'undefined' && submitted != null) {
                 if (submitted == correct_answer) {
-                    // $('#game').hide().delay(5000);
-                    // $('#correct').show().delay(5000).fadeOut();
                     update_score(level);
                     generate_question(level);
                 }
@@ -90,20 +87,7 @@ $(function () {
                     score = 0;
                     document.getElementById('score').innerHTML = '<p align="center">score:   ' + score + '</p>';
                 }
-
-
-
             }
-
         });
-
-
-
     }
-
-
-
-
-
-
 });

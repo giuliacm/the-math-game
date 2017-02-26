@@ -11,6 +11,10 @@ $(function () {
     var med_level = 50;
     var hard_level = 100;
 
+    var easy_points = 1;
+    var med_points = 2;
+    var hard_points = 3;
+
 
 
     $("#easy").click(function (e) {
@@ -41,8 +45,18 @@ $(function () {
     });
 
 
-    function update_score() {
-        score = score + 1;
+    function update_score(level) {
+        if (level == easy_level) {
+            score = score + easy_points;
+        }
+        else if (level == med_level) {
+            score = score + med_points;
+        }
+        else if (level == hard_level) {
+            score = score + hard_points;
+        }
+
+
         document.getElementById('score').innerHTML = '<p align="center">score:   ' + score + '</p>';
 
     }
@@ -70,7 +84,7 @@ $(function () {
 
             if(typeof submitted != 'undefined' && submitted != null) {
                 if (submitted == correct_answer) {
-                    update_score();
+                    update_score(level1);
                     generate_question(level1, level2);
                 }
                 else {

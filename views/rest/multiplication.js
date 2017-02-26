@@ -21,7 +21,7 @@ $(function () {
 
         document.getElementById('score').innerHTML = '<p align="center">score:   ' + score + '</p>';
 
-        generate_question(easy_level);
+        generate_question(easy_level, easy_level);
     });
 
     $("#medium").click(function (e) {
@@ -30,7 +30,7 @@ $(function () {
 
         document.getElementById('score').innerHTML = '<p align="center">score:   ' + score + '</p>';
 
-        generate_question(med_level);
+        generate_question(med_level, easy_level);
     });
 
     $("#hard").click(function (e) {
@@ -39,7 +39,7 @@ $(function () {
 
         document.getElementById('score').innerHTML = '<p align="center">score:   ' + score + '</p>';
 
-        generate_question(hard_level);
+        generate_question(hard_level, easy_level);
     });
 
 
@@ -65,9 +65,9 @@ $(function () {
         return num1 * num2;
     }
 
-    function generate_question(level) {
-        var num1 = Math.floor((Math.random() * level) + 1);
-        var num2 = Math.floor((Math.random() * level) + 1);
+    function generate_question(level1, level2) {
+        var num1 = Math.floor((Math.random() * level1) + 1);
+        var num2 = Math.floor((Math.random() * level2) + 1);
         var html = '<p align="center">' + num1 + ' x ' + num2 + ' = ' + '<input type="number" id="submitted_answer">'+  '<button type="button" id="submit">submit</button></p>';
         document.getElementById('game').innerHTML = html;
 
@@ -96,14 +96,7 @@ $(function () {
             }
 
         });
-
-
-
+        
     }
-
-
-
-
-
 
 });
