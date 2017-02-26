@@ -83,7 +83,7 @@ $(function () {
                     // $('#game').hide().delay(5000);
                     // $('#correct').show().delay(5000).fadeOut();
                     update_score(level1);
-                    generate_question(level1);
+                    generate_question(level1, level2);
                 }
                 else {
                     document.getElementById('game').innerHTML = '<p align="center">game over!</p>';
