@@ -5,7 +5,7 @@
 var express = require('express');
 var app = express();
 
-app.use(express.static('views'));
+app.use(express.static('docs'));
 
 app.get('/', function(req, res) {
     res.sendFile('index');
